@@ -39,7 +39,7 @@ class Trainer:
                     print("第{0}轮第{1}轮loss为{2}".format(epoch, i, loss.item()))
                     self.Draw.draw(features.cpu().detach().numpy(), label.cpu().detach().numpy(), epoch, i,
                                    self.pictures_path, loss.item())
-                if loss.item() < loss_new:
-                    loss_new = loss.item()
-                    torch.save(self.net.state_dict(), self.net_path)
+                # if loss.item() < loss_new:
+                #     loss_new = loss.item()
+                #     torch.save(self.net.state_dict(), self.net_path)
             epoch += 1
